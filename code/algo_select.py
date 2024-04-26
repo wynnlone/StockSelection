@@ -493,7 +493,7 @@ if __name__ == '__main__':
                             window_width=window_width)
     
     df_perform = get_perform(df_index, df_select)
-    df_perform.to_csv('df_perform_{selection_pool}_{freq}_{select_num}_{simple}_{factor_list}.csv')
+    df_perform.to_csv(f'df_perform_{selection_pool}_{freq}_{select_num}_{simple}_{factor_list}.csv')
     
     
     # Plot
