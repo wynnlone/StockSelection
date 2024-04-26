@@ -17,7 +17,7 @@ def run_time(func):
         return result
     return wrapper
 
-def get_index(index_name = '^GSPC', index_folder = '..\data\yf\index'):
+def get_index(index_name = '^GSPC', index_folder = '..\data'):
    
     df = pd.read_csv(f'{index_folder}\{index_name}.csv', parse_dates=['formatted_date'], na_values='None')
     df.sort_values(by=['formatted_date'], inplace=True)
@@ -29,7 +29,7 @@ def get_index(index_name = '^GSPC', index_folder = '..\data\yf\index'):
     
     return df_index
 
-def get_rf(rf_name = 'DGS1', rf_folder = '..\data\FRED'):
+def get_rf(rf_name = 'DGS1', rf_folder = '..\data'):
     
     df = pd.read_csv(f'{rf_folder}\{rf_name}.csv', parse_dates=['DATE'])
     df.rename(columns = {'DATE':'formatted_date', f'{rf_name}':'rf_rate'}, inplace=True)
@@ -44,7 +44,7 @@ def get_rf(rf_name = 'DGS1', rf_folder = '..\data\FRED'):
     
     return df_rf
 
-def get_stock(ticker, stock_folder = '..\data\yf\selection'):
+def get_stock(ticker, stock_folder = '..\data\selection'):
     
     df = pd.read_csv(f'{stock_folder}\{ticker}.csv', parse_dates=['formatted_date'], na_values='None')
     df.sort_values(by=['formatted_date'], inplace=True)
