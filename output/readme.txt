@@ -1,1 +1,1 @@
-see results and factor ic 
+see results for strategy performance and factor ic for analysis
