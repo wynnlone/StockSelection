@@ -1,1 +1,0 @@
-Put stock csv and in this folder or read df_pool directly which pools s&500 stocks to avoid data processing.
